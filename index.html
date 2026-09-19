@@ -1,0 +1,1635 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#F5F3F9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141119" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+:root{color-scheme:light dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font-family:system-ui,-apple-system,sans-serif;font-size:14px;background:#F5F3F9}
+@media (prefers-color-scheme:dark){body{background:#141119}}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>Zasadací poriadok Zuzik &amp; Petik</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+
+:root{
+  --paper:#F5F3F9;
+  --surface:#FFFFFF;
+  --surface-2:#FAF8FD;
+  --ink:#2B2536;
+  --ink-2:#6B6380;
+  --ink-3:#9B92AD;
+  --line:#E3DFEB;
+  --line-2:#CEC7DC;
+
+  --linen:#ECE4D8;
+  --linen-2:#E2D8C7;
+  --linen-edge:#D4C7B2;
+  --linen-ink:#8A7A61;
+
+  --zuzik:#DE6A94;
+  --zuzik-bg:#FCEDF3;
+  --zuzik-line:#F0BED2;
+  --zuzik-ink:#8D3155;
+
+  --petik:#4F86D6;
+  --petik-bg:#E9F0FC;
+  --petik-line:#BFD5F3;
+  --petik-ink:#254E7E;
+
+  --accent:#7B5EA7;
+  --accent-bg:#F0EAFA;
+  --accent-line:#D6C7EE;
+
+  --maybe-bg:#F1EFF4;
+  --maybe-line:#D6D1DE;
+
+  --shadow-1:0 1px 2px rgba(43,37,54,.07);
+  --shadow-2:0 2px 4px rgba(43,37,54,.06),0 10px 24px -12px rgba(43,37,54,.30);
+  --shadow-3:0 10px 20px rgba(43,37,54,.14),0 30px 60px -20px rgba(43,37,54,.38);
+
+  --r:10px;
+  --seat-h:62px;
+  --seat-w:136px;
+  --band:58px;
+  --gap:9px;
+}
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#141119;
+    --surface:#1E1A26;
+    --surface-2:#252030;
+    --ink:#EFEBF5;
+    --ink-2:#A79EBB;
+    --ink-3:#786F8E;
+    --line:#312A3F;
+    --line-2:#463D59;
+
+    --linen:#332C24;
+    --linen-2:#3D352B;
+    --linen-edge:#4E4436;
+    --linen-ink:#B7A68C;
+
+    --zuzik:#F08CB0;
+    --zuzik-bg:#3A2130;
+    --zuzik-line:#5D3347;
+    --zuzik-ink:#FBD3E1;
+
+    --petik:#7FADEE;
+    --petik-bg:#1B2940;
+    --petik-line:#2D4569;
+    --petik-ink:#D0E1F9;
+
+    --accent:#AC8FDC;
+    --accent-bg:#2A2140;
+    --accent-line:#443563;
+
+    --maybe-bg:#221D2C;
+    --maybe-line:#382F47;
+
+    --shadow-1:0 1px 2px rgba(0,0,0,.4);
+    --shadow-2:0 2px 4px rgba(0,0,0,.35),0 10px 24px -12px rgba(0,0,0,.7);
+    --shadow-3:0 10px 20px rgba(0,0,0,.5),0 30px 60px -20px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141119; --surface:#1E1A26; --surface-2:#252030;
+  --ink:#EFEBF5; --ink-2:#A79EBB; --ink-3:#786F8E;
+  --line:#312A3F; --line-2:#463D59;
+  --linen:#332C24; --linen-2:#3D352B; --linen-edge:#4E4436; --linen-ink:#B7A68C;
+  --zuzik:#F08CB0; --zuzik-bg:#3A2130; --zuzik-line:#5D3347; --zuzik-ink:#FBD3E1;
+  --petik:#7FADEE; --petik-bg:#1B2940; --petik-line:#2D4569; --petik-ink:#D0E1F9;
+  --accent:#AC8FDC; --accent-bg:#2A2140; --accent-line:#443563;
+  --maybe-bg:#221D2C; --maybe-line:#382F47;
+  --shadow-1:0 1px 2px rgba(0,0,0,.4);
+  --shadow-2:0 2px 4px rgba(0,0,0,.35),0 10px 24px -12px rgba(0,0,0,.7);
+  --shadow-3:0 10px 20px rgba(0,0,0,.5),0 30px 60px -20px rgba(0,0,0,.8);
+}
+
+html,body{height:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"DM Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:14px;line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  -webkit-text-size-adjust:100%;
+  overscroll-behavior:none;
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* ---------- shell ---------- */
+.app{
+  height:100%;display:grid;
+  grid-template-rows:auto auto minmax(0,1fr) auto;
+  grid-template-areas:"bar" "sub" "stage" "tray";
+}
+@media (min-width:920px){
+  .app{
+    grid-template-columns:minmax(0,1fr) 322px;
+    grid-template-rows:auto auto minmax(0,1fr);
+    grid-template-areas:"bar bar" "sub tray" "stage tray";
+  }
+}
+.subbar{
+  grid-area:sub;display:flex;justify-content:center;
+  padding:10px 16px 0;min-width:0;
+}
+@media (max-width:560px){
+  .btn .lbl{display:none}
+  .bar .btn{padding:6px 9px}
+}
+
+/* ---------- command bar ---------- */
+.bar{
+  grid-area:bar;background:var(--surface);border-bottom:1px solid var(--line);
+  padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px));
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;
+  position:relative;z-index:30;
+}
+.brand{display:flex;align-items:baseline;gap:10px;min-width:0}
+.brand h1{
+  margin:0;font-family:"Fraunces",Georgia,serif;font-weight:600;
+  font-size:19px;letter-spacing:-.01em;white-space:nowrap;
+}
+.brand .vname{
+  font-family:"DM Mono",ui-monospace,monospace;font-size:11.5px;color:var(--ink-2);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:18ch;
+}
+.spacer{flex:1 1 auto;min-width:0}
+
+.stats{
+  display:flex;align-items:center;gap:0;
+  font-family:"DM Mono",ui-monospace,monospace;font-size:11.5px;
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;
+  background:var(--surface-2);
+}
+.stat{padding:4px 9px;display:flex;align-items:center;gap:5px;white-space:nowrap}
+.stat+.stat{border-left:1px solid var(--line)}
+.stat b{font-weight:500;font-variant-numeric:tabular-nums}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+.dot.z{background:var(--zuzik)} .dot.p{background:var(--petik)}
+
+.acts{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.btn{
+  appearance:none;border:1px solid var(--line-2);background:var(--surface);
+  border-radius:8px;padding:6px 11px;font-size:13px;font-weight:500;
+  cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+  transition:background .12s,border-color .12s,transform .08s;
+}
+.btn:hover{background:var(--surface-2);border-color:var(--accent-line)}
+.btn:active{transform:translateY(1px)}
+.btn[disabled]{opacity:.42;cursor:default;pointer-events:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.07);background:var(--accent)}
+.btn.icon{padding:6px 8px}
+.btn svg{width:15px;height:15px;flex:none}
+
+/* ---------- stage ---------- */
+.stage{
+  grid-area:stage;overflow:auto;min-width:0;min-height:0;
+  padding:16px 16px 22px;
+  -webkit-overflow-scrolling:touch;
+  background:var(--paper);
+}
+.stage-inner{
+  min-width:min-content;min-height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+
+.toolrow{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;
+  background:var(--surface);border:1px solid var(--line);border-radius:10px;
+  padding:6px;box-shadow:var(--shadow-1);max-width:100%;
+}
+.toolrow .sep{width:1px;align-self:stretch;background:var(--line);margin:2px 3px}
+.stepper{display:flex;align-items:center;gap:2px;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:2px}
+.stepper button{
+  appearance:none;border:0;background:transparent;width:28px;height:26px;border-radius:6px;
+  cursor:pointer;font-size:16px;line-height:1;color:var(--ink-2);
+}
+.stepper button:hover{background:var(--surface);color:var(--ink)}
+.stepper .val{
+  font-family:"DM Mono",ui-monospace,monospace;font-size:12px;min-width:74px;text-align:center;
+  font-variant-numeric:tabular-nums;color:var(--ink-2);
+}
+.stepper .val b{color:var(--ink);font-weight:500}
+
+/* ---------- the table ---------- */
+.grid{display:grid;gap:var(--gap);position:relative}
+.grid.h{width:max-content}
+.grid.v{width:100%;max-width:520px}
+
+.band{
+  grid-area:band;border-radius:8px;position:relative;z-index:0;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 3px, rgba(0,0,0,.022) 3px 4px),
+    linear-gradient(180deg, var(--linen) 0%, var(--linen-2) 100%);
+  border:1px solid var(--linen-edge);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35), var(--shadow-1);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.grid.v .band{
+  background:
+    repeating-linear-gradient(0deg, transparent 0 3px, rgba(0,0,0,.022) 3px 4px),
+    linear-gradient(90deg, var(--linen) 0%, var(--linen-2) 100%);
+}
+.band span{
+  font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:12px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--linen-ink);
+  white-space:nowrap;opacity:.9;
+}
+.grid.v .band span{writing-mode:vertical-rl;letter-spacing:.2em}
+
+/* ---------- seats ---------- */
+.seat{
+  position:relative;border-radius:var(--r);min-width:0;z-index:1;
+  display:flex;align-items:center;justify-content:center;
+}
+.seat.empty{
+  border:1.5px dashed var(--line-2);background:var(--surface-2);
+  transition:background .14s,border-color .14s;
+}
+.grid.v .seat.head{max-width:190px;justify-self:center;width:100%}
+.seat.empty .code{
+  font-family:"DM Mono",ui-monospace,monospace;font-size:11px;color:var(--ink-3);
+  letter-spacing:.06em;
+}
+.seat.empty.drop{background:var(--accent-bg);border-color:var(--accent);border-style:solid}
+.seat.armed{border-color:var(--accent);background:var(--accent-bg);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.62}}
+.seat.occupied.drop .card{box-shadow:0 0 0 2.5px var(--accent),var(--shadow-2)}
+
+/* ---------- name card ---------- */
+.card{
+  width:100%;height:100%;border-radius:var(--r);
+  border:1.5px solid var(--line-2);background:var(--surface);
+  padding:7px 9px;display:flex;flex-direction:column;justify-content:center;gap:1px;
+  cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;
+  -webkit-touch-callout:none;position:relative;overflow:hidden;
+  box-shadow:var(--shadow-1);
+  transition:box-shadow .14s,transform .1s,border-color .14s;
+}
+.card:active{cursor:grabbing}
+.card .nm{
+  font-size:14px;font-weight:700;letter-spacing:-.008em;line-height:1.15;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.card .ct{
+  font-size:10.5px;font-weight:500;letter-spacing:.05em;text-transform:lowercase;
+  color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.card .sc{
+  position:absolute;top:4px;right:6px;font-family:"DM Mono",ui-monospace,monospace;
+  font-size:9px;color:var(--ink-3);letter-spacing:.04em;opacity:.8;
+}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--line-2)}
+
+.card.z{background:var(--zuzik-bg);border-color:var(--zuzik-line)}
+.card.z::before{background:var(--zuzik)}
+.card.z .ct{color:var(--zuzik-ink);opacity:.82}
+.card.p{background:var(--petik-bg);border-color:var(--petik-line)}
+.card.p::before{background:var(--petik)}
+.card.p .ct{color:var(--petik-ink);opacity:.82}
+
+.card.maybe{background:var(--maybe-bg);border-color:var(--maybe-line);border-style:dashed}
+.card.maybe .nm{color:var(--ink-2);font-weight:500}
+.card.maybe .ct{color:var(--ink-3)}
+.card.maybe::before{background:var(--line-2);opacity:.6}
+.card.maybe .nm::after{content:" ?";color:var(--ink-3);font-weight:400}
+
+.card.sel{box-shadow:0 0 0 2.5px var(--accent),var(--shadow-2);transform:translateY(-1px)}
+.card.ghosted{opacity:.3}
+.seat.near .card{box-shadow:0 0 0 1.5px var(--accent-line),var(--shadow-1)}
+.seat.across .card{box-shadow:0 0 0 1.5px var(--accent),var(--shadow-1)}
+
+.unseat{
+  position:absolute;top:-7px;right:-7px;width:22px;height:22px;border-radius:50%;
+  border:1.5px solid var(--line-2);background:var(--surface);color:var(--ink-2);
+  display:grid;place-items:center;cursor:pointer;z-index:5;box-shadow:var(--shadow-1);
+  font-size:13px;line-height:1;padding:0;
+}
+.unseat:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.dragging{
+  position:fixed;z-index:900;pointer-events:none;left:0;top:0;
+  box-shadow:var(--shadow-3);transform-origin:center;
+  border-radius:var(--r);
+}
+
+/* ---------- tray ---------- */
+.tray{
+  grid-area:tray;background:var(--surface);border-top:1px solid var(--line);
+  display:flex;flex-direction:column;min-height:0;z-index:20;
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (min-width:920px){
+  .tray{border-top:0;border-left:1px solid var(--line)}
+}
+.tray-head{
+  display:flex;align-items:center;gap:8px;padding:9px 14px;
+  border-bottom:1px solid var(--line);flex:none;
+}
+.tray-head h2{
+  margin:0;font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:14px;
+}
+.count-pill{
+  font-family:"DM Mono",ui-monospace,monospace;font-size:11px;
+  background:var(--accent-bg);color:var(--accent);border:1px solid var(--accent-line);
+  border-radius:999px;padding:1px 8px;font-variant-numeric:tabular-nums;
+}
+.segs{display:flex;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:2px;gap:2px}
+.segs button{
+  appearance:none;border:0;background:transparent;border-radius:6px;
+  padding:3px 9px;font-size:12px;font-weight:500;cursor:pointer;color:var(--ink-2);
+}
+.segs button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow-1)}
+
+.pool-wrap{overflow:auto;min-height:0;flex:1 1 auto;-webkit-overflow-scrolling:touch}
+.tray.collapsed .pool-wrap{overflow-x:auto;overflow-y:hidden}
+.pool{padding:10px 14px 12px;display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(132px,1fr))}
+.tray.collapsed .pool{display:flex;flex-wrap:nowrap;width:max-content;padding:9px 14px}
+.tray.collapsed .pool .pcard{width:132px;flex:none}
+.pcard{height:var(--seat-h)}
+.pool h3{
+  grid-column:1/-1;margin:6px 0 -2px;font-size:10.5px;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);
+}
+.tray.collapsed .pool h3{display:none}
+.pool .empty-note{
+  grid-column:1/-1;color:var(--ink-3);font-size:12.5px;padding:10px 0;text-align:center;
+}
+.tray.drop{background:var(--accent-bg)}
+
+.hint{
+  padding:0 14px 10px;font-size:11.5px;color:var(--ink-3);line-height:1.4;flex:none;
+}
+.tray.collapsed .hint{display:none}
+@media (max-width:919px){
+  .tray-head{padding:7px 14px}
+  .pool-wrap{max-height:min(38vh,300px)}
+}
+
+/* ---------- overlay / sheets ---------- */
+.ov{
+  position:fixed;inset:0;z-index:800;background:rgba(24,19,33,.44);
+  display:grid;place-items:center;padding:16px;
+  padding-top:calc(16px + env(safe-area-inset-top,0px));
+  padding-bottom:calc(16px + env(safe-area-inset-bottom,0px));
+  backdrop-filter:blur(2px);
+}
+.sheet{
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  box-shadow:var(--shadow-3);width:100%;max-width:480px;max-height:100%;
+  display:flex;flex-direction:column;overflow:hidden;
+}
+.sheet.wide{max-width:860px}
+.sheet-head{
+  display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid var(--line);flex:none;
+}
+.sheet-head h2{margin:0;font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:16px}
+.sheet-body{padding:14px 16px;overflow:auto;min-height:0}
+.sheet-foot{padding:12px 16px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end;flex:none;flex-wrap:wrap}
+
+.vlist{display:flex;flex-direction:column;gap:7px}
+.vrow{
+  display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:10px;
+  border:1px solid var(--line);background:var(--surface-2);cursor:pointer;text-align:left;width:100%;
+}
+.vrow:hover{border-color:var(--accent-line)}
+.vrow[aria-current="true"]{border-color:var(--accent);background:var(--accent-bg)}
+.vrow .vmeta{flex:1 1 auto;min-width:0}
+.vrow .vt{font-weight:700;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vrow .vs{
+  font-family:"DM Mono",ui-monospace,monospace;font-size:11px;color:var(--ink-2);
+  font-variant-numeric:tabular-nums;
+}
+.vrow .mini{display:flex;gap:2px;align-items:center;flex:none}
+.vrow .mini i{width:4px;height:12px;border-radius:1px;display:block;background:var(--line-2)}
+.vrow .mini i.z{background:var(--zuzik)} .vrow .mini i.p{background:var(--petik)}
+.iconbtn{
+  appearance:none;border:1px solid transparent;background:transparent;border-radius:7px;
+  width:28px;height:28px;display:grid;place-items:center;cursor:pointer;color:var(--ink-2);flex:none;
+}
+.iconbtn:hover{background:var(--surface);border-color:var(--line);color:var(--ink)}
+.iconbtn svg{width:15px;height:15px}
+
+.field{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.field label{font-size:11.5px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.field input{
+  font:inherit;padding:9px 11px;border-radius:9px;border:1px solid var(--line-2);
+  background:var(--surface-2);color:var(--ink);
+}
+.field input:focus,.field textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:var(--accent)}
+.field textarea{
+  font-family:"DM Mono",ui-monospace,monospace;font-size:12px;line-height:1.5;
+  padding:9px 11px;border-radius:9px;border:1px solid var(--line-2);
+  background:var(--surface-2);color:var(--ink);resize:vertical;word-break:break-all;
+}
+.note{margin:0 0 14px;font-size:12px;color:var(--ink-2);line-height:1.45}
+
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{
+  display:flex;gap:11px;align-items:flex-start;padding:11px 12px;border-radius:10px;
+  border:1px solid var(--line);background:var(--surface-2);cursor:pointer;text-align:left;width:100%;
+}
+.opt:hover{border-color:var(--accent);background:var(--accent-bg)}
+.opt .og{flex:none;width:38px;height:30px;border-radius:5px;position:relative;overflow:hidden;background:var(--linen);border:1px solid var(--linen-edge)}
+.opt .og i{position:absolute;height:6px;border-radius:1px}
+.opt strong{display:block;font-size:13.5px}
+.opt span{display:block;font-size:12px;color:var(--ink-2);line-height:1.35}
+
+.shotimg{
+  width:100%;border-radius:10px;border:1px solid var(--line);display:block;
+  background:#fff;
+}
+.toast{
+  position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));
+  transform:translateX(-50%) translateY(8px);
+  background:var(--ink);color:var(--paper);padding:9px 16px;border-radius:999px;
+  font-size:13px;font-weight:500;z-index:950;box-shadow:var(--shadow-3);
+  opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;max-width:calc(100vw - 32px);text-align:center;
+}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="bar">
+    <div class="brand">
+      <h1>Zasadací poriadok</h1>
+      <span class="vname" id="vname">—</span>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="spacer"></div>
+    <div class="acts">
+      <button class="btn" id="btnUndo" title="Späť (⌘Z)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M3 13a9 9 0 1 0 3-7.7L3 8"/></svg>
+        <span class="lbl">Späť</span>
+      </button>
+      <button class="btn" id="btnShare" title="Poslať plán inému zariadeniu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+        <span class="lbl">Zdieľať</span>
+      </button>
+      <button class="btn" id="btnVersions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/></svg>
+        <span class="lbl">Verzie</span>
+      </button>
+      <button class="btn primary" id="btnShot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L8 6H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-4l-1.5-2Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        <span class="lbl">Screenshot</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="subbar">
+      <div class="toolrow">
+        <div class="stepper">
+          <button id="lenMinus" aria-label="Skrátiť stôl">−</button>
+          <span class="val"><b id="lenVal">16</b> párov · <b id="seatVal">32</b> miest</span>
+          <button id="lenPlus" aria-label="Predĺžiť stôl">+</button>
+        </div>
+        <button class="btn" id="btnHeads">Čelá: <b id="headsState">vyp.</b></button>
+        <button class="btn icon" id="btnOrient" title="Otočiť stôl">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M21 3 13 11"/><path d="M8 21H3v-5"/><path d="m3 21 8-8"/></svg>
+        </button>
+        <span class="sep"></span>
+        <button class="btn" id="btnAuto">Rozsadiť</button>
+        <button class="btn" id="btnFlip" title="Vymeniť hornú a dolnú stranu stola">Prehodiť strany</button>
+        <button class="btn" id="btnMirror" title="Otočiť poradie pozdĺž stola">Zrkadliť</button>
+        <button class="btn" id="btnClear">Vyprázdniť</button>
+      </div>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="stage-inner"><div class="grid" id="grid"></div></div>
+  </div>
+
+  <aside class="tray" id="tray">
+    <div class="tray-head">
+      <h2>Neusadení</h2>
+      <span class="count-pill" id="poolCount">0</span>
+      <div class="spacer"></div>
+      <div class="segs" id="segSide">
+        <button data-side="all" aria-pressed="true">Všetci</button>
+        <button data-side="Zuzik" aria-pressed="false">Zuzik</button>
+        <button data-side="Petik" aria-pressed="false">Petik</button>
+      </div>
+      <button class="iconbtn" id="btnExpand" title="Rozbaliť zoznam">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+      </button>
+    </div>
+    <div class="pool-wrap"><div class="pool" id="pool"></div></div>
+    <p class="hint" id="hint"></p>
+  </aside>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   Hostia — meno / kategória / strana
+   ============================================================ */
+const RAW = [
+  ["Zuzik","nevesta","Zuzik"],
+  ["Petik","ženích","Petik"],
+  ["Zuzik mamka","rodič","Zuzik"],
+  ["Vlasto","rodič","Zuzik"],
+  ["Petik mamka","rodič","Petik"],
+  ["Petik ocko","rodič","Petik"],
+  ["Lucka","súrodenec","Petik"],
+  ["Babka Boženka","ostatné","Petik"],
+  ["Katka","súrodenec","Zuzik"],
+  ["Zdenko","súrodenec","Zuzik"],
+  ["Stellka","dieťa","Zuzik"],
+  ["Dávidko","dieťa","Zuzik"],
+  ["Dominika","súrodenec","Zuzik"],
+  ["Jakub","súrodenec","Zuzik"],
+  ["Zuzka (malá)","dieťa","Zuzik"],
+  ["Tomáš","súrodenec","Zuzik"],
+  ["Amanda","nie","Zuzik"],
+  ["Mery","ostatné","Petik"],
+  ["Peťo P.","ostatné","Petik"],
+  ["Ani","dieťa","Petik"],
+  ["Filipko","dieťa","Petik"],
+  ["Hanka","ostatné","Petik"],
+  ["Peťo K.","ostatné","Petik"],
+  ["Lukáš","ostatné","Petik"],
+  ["Peťo K. junior","ostatné","Petik"],
+  ["Danka","ostatné","Petik"],
+  ["Zuzka","ostatné","Petik"],
+  ["Noro","ostatné","Petik"],
+  ["Norko","ostatné","Petik"],
+  ["Dedko","nie","Petik"],
+  ["Krstná Ľudka","ostatné","Zuzik"],
+  ["Krstný Ivan","ostatné","Zuzik"],
+  ["Ľubo","ostatné","Zuzik"],
+  ["Miška","ostatné","Zuzik"],
+  ["Jimmy","nie","Petik"],
+  ["Majka","nie","Petik"],
+  ["Kristiánko","nie","Petik"]
+];
+const GUESTS = RAW.map((r,i)=>({id:"g"+i, name:r[0], cat:r[1], side:r[2], maybe:r[1]==="nie"}));
+const BY_ID = Object.fromEntries(GUESTS.map(g=>[g.id,g]));
+const CORE = GUESTS.filter(g=>!g.maybe);
+const RANK = {"nevesta":0,"ženích":0,"rodič":1,"súrodenec":2,"dieťa":3,"ostatné":4,"nie":5};
+
+/* ============================================================
+   Stav
+   ============================================================ */
+const CLIENT = Math.random().toString(36).slice(2,10);
+const LS_KEY = "zp-seating-v1";
+const MAX_PAIRS = 30, MIN_PAIRS = 2;
+
+function newVersion(name, pairs){
+  return {id:"v"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),
+          name:name, pairs:pairs||16, heads:false, assign:{}, updated:Date.now()};
+}
+let store = {versions:[], activeId:null, updated:0, client:CLIENT};
+let ui = {side:"all", showMaybe:true, orient:"auto", expanded:false, sel:null};
+let undoStack = [];
+
+function V(){ return store.versions.find(v=>v.id===store.activeId) || store.versions[0]; }
+
+/* ---- seats ---- */
+function seatKeys(v){
+  const k=[];
+  if(v.heads) k.push("H0");
+  for(let i=0;i<v.pairs;i++) k.push("A"+i);
+  for(let i=0;i<v.pairs;i++) k.push("B"+i);
+  if(v.heads) k.push("H1");
+  return k;
+}
+function seatCode(key){
+  if(key==="H0") return "Č1";
+  if(key==="H1") return "Č2";
+  return key[0]+(parseInt(key.slice(1),10)+1);
+}
+function seatedIds(v){ return new Set(Object.values(v.assign)); }
+function poolGuests(v){
+  const s = seatedIds(v);
+  return GUESTS.filter(g=>!s.has(g.id));
+}
+
+/* ============================================================
+   Perzistencia — localStorage vždy, db keď je k dispozícii
+   ============================================================ */
+/* Rozloženie žije v localStorage tohto zariadenia. Medzi zariadeniami
+   a ľuďmi sa prenáša kódom plánu (encodePlan / importPlan nižšie). */
+
+function loadLocal(){
+  try{
+    const raw = localStorage.getItem(LS_KEY);
+    if(!raw) return null;
+    const d = JSON.parse(raw);
+    if(d && Array.isArray(d.versions) && d.versions.length) return d;
+  }catch(e){}
+  return null;
+}
+function saveLocal(){
+  try{ localStorage.setItem(LS_KEY, JSON.stringify(store)); }catch(e){}
+}
+function touch(){
+  const v = V(); if(v) v.updated = Date.now();
+  store.updated = Date.now(); store.client = CLIENT;
+  saveLocal();
+}
+
+/* ============================================================
+   Render
+   ============================================================ */
+const $ = s=>document.querySelector(s);
+const grid = $("#grid"), pool = $("#pool"), stage = $("#stage"), tray = $("#tray");
+
+function orientation(){
+  if(ui.orient!=="auto") return ui.orient;
+  return stage.clientWidth < 700 ? "v" : "h";
+}
+
+function cardEl(g, opts){
+  opts = opts||{};
+  const el = document.createElement("div");
+  el.className = "card " + (g.side==="Zuzik"?"z":"p") + (g.maybe?" maybe":"");
+  el.dataset.gid = g.id;
+  if(opts.seat) el.dataset.fromSeat = opts.seat;
+  if(ui.sel && ui.sel.gid===g.id) el.classList.add("sel");
+  const nm = document.createElement("div"); nm.className="nm"; nm.textContent = g.name;
+  const ct = document.createElement("div"); ct.className="ct"; ct.textContent = g.cat;
+  el.append(nm, ct);
+  if(opts.seat){
+    const sc = document.createElement("div"); sc.className="sc"; sc.textContent = seatCode(opts.seat);
+    el.append(sc);
+  }
+  if(opts.seat && ui.sel && ui.sel.gid===g.id){
+    const x = document.createElement("button");
+    x.className="unseat"; x.type="button"; x.textContent="×";
+    x.title="Vrátiť do zoznamu"; x.setAttribute("aria-label","Vrátiť do zoznamu");
+    x.addEventListener("pointerdown", e=>e.stopPropagation());
+    x.addEventListener("click", e=>{ e.stopPropagation(); pushUndo(); delete V().assign[opts.seat]; ui.sel=null; touch(); renderAll(); });
+    el.append(x);
+  }
+  attachDrag(el);
+  return el;
+}
+
+function renderTable(){
+  const v = V(), o = orientation(), n = v.pairs, H = v.heads;
+  grid.className = "grid " + o;
+  grid.style.cssText = "";
+  const off = H ? 1 : 0;
+
+  if(o==="h"){
+    grid.style.gridTemplateColumns =
+      (H?"var(--seat-w) ":"") + "repeat("+n+", var(--seat-w))" + (H?" var(--seat-w)":"");
+    grid.style.gridTemplateRows = "var(--seat-h) var(--band) var(--seat-h)";
+  }else{
+    grid.style.gridTemplateRows =
+      (H?"var(--seat-h) ":"") + "repeat("+n+", var(--seat-h))" + (H?" var(--seat-h)":"");
+    grid.style.gridTemplateColumns = "minmax(0,1fr) var(--band) minmax(0,1fr)";
+  }
+  grid.innerHTML = "";
+
+  // stolová doska
+  const band = document.createElement("div");
+  band.className = "band";
+  if(o==="h"){ band.style.gridColumn = (1+off)+" / span "+n; band.style.gridRow = "2"; }
+  else{ band.style.gridRow = (1+off)+" / span "+n; band.style.gridColumn = "2"; }
+  const bl = document.createElement("span");
+  bl.textContent = (n*2 + (H?2:0)) + " miest";
+  band.append(bl);
+  grid.append(band);
+
+  const place = (key)=>{
+    const s = document.createElement("div");
+    s.className = "seat";
+    s.dataset.seat = key;
+    if(key==="H0"){ s.classList.add("head"); if(o==="h"){s.style.gridColumn="1";s.style.gridRow="2";} else {s.style.gridRow="1";s.style.gridColumn="1 / -1";} }
+    else if(key==="H1"){ s.classList.add("head"); if(o==="h"){s.style.gridColumn="-2";s.style.gridRow="2";} else {s.style.gridRow="-2";s.style.gridColumn="1 / -1";} }
+    else{
+      const i = parseInt(key.slice(1),10), row = key[0]==="A"?1:3;
+      if(o==="h"){ s.style.gridColumn = (i+1+off); s.style.gridRow = row; }
+      else{ s.style.gridRow = (i+1+off); s.style.gridColumn = row; }
+    }
+    const gid = v.assign[key];
+    if(gid && BY_ID[gid]){
+      s.classList.add("occupied");
+      s.append(cardEl(BY_ID[gid], {seat:key}));
+    }else{
+      s.classList.add("empty");
+      if(ui.sel) s.classList.add("armed");
+      const c = document.createElement("span"); c.className="code"; c.textContent = seatCode(key);
+      s.append(c);
+    }
+    grid.append(s);
+  };
+  seatKeys(v).forEach(place);
+  markNeighbours();
+}
+
+function markNeighbours(){
+  grid.querySelectorAll(".near,.across").forEach(e=>e.classList.remove("near","across"));
+  if(!ui.sel || !ui.sel.seat) return;
+  const k = ui.sel.seat;
+  if(k[0]==="H") return;
+  const i = parseInt(k.slice(1),10), row = k[0];
+  const other = row==="A" ? "B" : "A";
+  const q = key=>grid.querySelector('[data-seat="'+key+'"]');
+  [q(row+(i-1)), q(row+(i+1))].forEach(e=>e&&e.classList.add("near"));
+  const op = q(other+i); if(op) op.classList.add("across");
+}
+
+function renderPool(){
+  const v = V();
+  let list = poolGuests(v);
+  if(ui.side!=="all") list = list.filter(g=>g.side===ui.side);
+  list.sort((a,b)=> (a.maybe-b.maybe) || (RANK[a.cat]-RANK[b.cat]) || a.name.localeCompare(b.name,"sk"));
+
+  pool.innerHTML = "";
+  const core = list.filter(g=>!g.maybe), maybes = list.filter(g=>g.maybe);
+  if(!list.length){
+    const p = document.createElement("p");
+    p.className = "empty-note";
+    p.textContent = ui.side==="all" ? "Všetci sedia. 🥂" : "Táto strana je celá usadená.";
+    pool.append(p);
+  }
+  const addGroup = (title, arr)=>{
+    if(!arr.length) return;
+    if(title){ const h=document.createElement("h3"); h.textContent=title; pool.append(h); }
+    arr.forEach(g=>{ const c = cardEl(g,{}); c.classList.add("pcard"); pool.append(c); });
+  };
+  addGroup(maybes.length && core.length ? "Pozvaní" : "", core);
+  addGroup("Voliteľní — zatiaľ „nie“", maybes);
+
+  $("#poolCount").textContent = list.length;
+}
+
+function renderStats(){
+  const v = V(), s = seatedIds(v);
+  const seats = v.pairs*2 + (v.heads?2:0);
+  const seated = Object.keys(v.assign).length;
+  const z = GUESTS.filter(g=>g.side==="Zuzik" && s.has(g.id)).length;
+  const p = GUESTS.filter(g=>g.side==="Petik" && s.has(g.id)).length;
+  $("#stats").innerHTML =
+    '<div class="stat"><b>'+seated+"/"+seats+'</b> usadených</div>'+
+    '<div class="stat"><span class="dot z"></span><b>'+z+'</b></div>'+
+    '<div class="stat"><span class="dot p"></span><b>'+p+'</b></div>';
+  $("#lenVal").textContent = v.pairs;
+  $("#seatVal").textContent = seats;
+  $("#headsState").textContent = v.heads ? "zap." : "vyp.";
+  $("#vname").textContent = v.name;
+  $("#btnUndo").disabled = !undoStack.length;
+  $("#lenMinus").disabled = v.pairs<=MIN_PAIRS;
+  $("#lenPlus").disabled = v.pairs>=MAX_PAIRS;
+}
+
+function renderHint(){
+  const fine = window.matchMedia("(pointer: fine)").matches;
+  $("#hint").textContent = fine
+    ? "Ťahaj menovky na miesta, alebo klikni na meno a potom na stoličku. Pustenie na obsadené miesto ich vymení."
+    : "Ťukni na meno a potom na stoličku. Podržaním prsta menovku chytíš a môžeš ju ťahať.";
+}
+
+let renderQueued = false;
+function renderAll(){
+  if(renderQueued) return;
+  renderQueued = true;
+  requestAnimationFrame(()=>{
+    renderQueued = false;
+    renderTable(); renderPool(); renderStats();
+  });
+}
+
+/* ============================================================
+   Undo
+   ============================================================ */
+function snap(){ const v=V(); return {id:v.id, pairs:v.pairs, heads:v.heads, assign:Object.assign({},v.assign)}; }
+function pushUndo(){ undoStack.push(snap()); if(undoStack.length>50) undoStack.shift(); }
+function undo(){
+  const s = undoStack.pop(); if(!s) return;
+  const v = store.versions.find(x=>x.id===s.id); if(!v) return;
+  v.pairs=s.pairs; v.heads=s.heads; v.assign=s.assign;
+  store.activeId = v.id; ui.sel=null; touch(); renderAll();
+}
+
+/* ============================================================
+   Presúvanie: klik/ťuk na výber, drag & drop, long-press na dotyku
+   ============================================================ */
+let drag = null, momentum = null;
+
+function findScroller(el, axis){
+  let n = el;
+  while(n && n !== document.body){
+    const st = getComputedStyle(n);
+    const ov = axis==="x" ? st.overflowX : st.overflowY;
+    const can = axis==="x" ? n.scrollWidth > n.clientWidth + 1 : n.scrollHeight > n.clientHeight + 1;
+    if((ov==="auto"||ov==="scroll") && can) return n;
+    n = n.parentElement;
+  }
+  return null;
+}
+
+function attachDrag(el){
+  el.addEventListener("pointerdown", onDown);
+}
+
+function onDown(e){
+  if(e.button !== undefined && e.button > 0) return;
+  if(momentum){ cancelAnimationFrame(momentum); momentum=null; }
+  const el = e.currentTarget;
+  const touch = e.pointerType === "touch" || e.pointerType === "pen";
+  drag = {
+    el, gid: el.dataset.gid, from: el.dataset.fromSeat || null,
+    x0:e.clientX, y0:e.clientY, x:e.clientX, y:e.clientY,
+    mode: touch ? "pending" : "maybe",
+    ghost:null, over:null, sx:null, sy:null, vx:0, vy:0, t:performance.now(),
+    pid:e.pointerId
+  };
+  try{ el.setPointerCapture(e.pointerId); }catch(err){}
+  if(touch) drag.timer = setTimeout(()=>{ if(drag && drag.mode==="pending") beginDrag(); }, 280);
+  window.addEventListener("pointermove", onMove, {passive:false});
+  window.addEventListener("pointerup", onUp);
+  window.addEventListener("pointercancel", onUp);
+}
+
+function beginDrag(){
+  const d = drag; if(!d) return;
+  clearTimeout(d.timer);
+  d.mode = "drag";
+  const r = d.el.getBoundingClientRect();
+  const g = d.el.cloneNode(true);
+  const x = g.querySelector(".unseat"); if(x) x.remove();
+  g.className = d.el.className.replace(/\bsel\b/,"") + " dragging";
+  g.style.width = r.width+"px"; g.style.height = r.height+"px";
+  d.ox = d.x - r.left; d.oy = d.y - r.top;
+  document.body.append(g);
+  d.ghost = g;
+  d.el.classList.add("ghosted");
+  moveGhost();
+  if(navigator.vibrate) try{ navigator.vibrate(8); }catch(e){}
+}
+
+function moveGhost(){
+  const d = drag; if(!d||!d.ghost) return;
+  d.ghost.style.transform =
+    "translate("+(d.x-d.ox)+"px,"+(d.y-d.oy)+"px) rotate(-1.4deg) scale(1.05)";
+}
+
+function onMove(e){
+  const d = drag; if(!d) return;
+  const dx = e.clientX - d.x0, dy = e.clientY - d.y0;
+  const now = performance.now();
+
+  if(d.mode==="maybe"){
+    if(Math.hypot(dx,dy) > 4) beginDrag(); else return;
+  }
+  if(d.mode==="pending"){
+    if(Math.hypot(dx,dy) > 9){
+      clearTimeout(d.timer);
+      d.mode = "scroll";
+      d.sx = findScroller(d.el,"x"); d.sy = findScroller(d.el,"y");
+    }else return;
+  }
+
+  if(d.mode==="scroll"){
+    e.preventDefault();
+    const mx = e.clientX - d.x, my = e.clientY - d.y;
+    if(d.sx) d.sx.scrollLeft -= mx;
+    if(d.sy) d.sy.scrollTop  -= my;
+    const dt = Math.max(1, now - d.t);
+    d.vx = mx/dt*16; d.vy = my/dt*16; d.t = now;
+    d.x = e.clientX; d.y = e.clientY;
+    return;
+  }
+
+  if(d.mode==="drag"){
+    e.preventDefault();
+    d.x = e.clientX; d.y = e.clientY;
+    moveGhost();
+    d.ghost.style.visibility = "hidden";
+    const under = document.elementFromPoint(d.x, d.y);
+    d.ghost.style.visibility = "";
+    const seat = under && under.closest ? under.closest("[data-seat]") : null;
+    const inTray = under && under.closest ? under.closest("#tray") : null;
+    if(d.over && d.over !== seat) d.over.classList.remove("drop");
+    tray.classList.toggle("drop", !!inTray && !!d.from);
+    d.over = seat;
+    if(seat) seat.classList.add("drop");
+  }
+}
+
+function onUp(e){
+  const d = drag; if(!d) return;
+  window.removeEventListener("pointermove", onMove);
+  window.removeEventListener("pointerup", onUp);
+  window.removeEventListener("pointercancel", onUp);
+  clearTimeout(d.timer);
+  try{ d.el.releasePointerCapture(d.pid); }catch(err){}
+  tray.classList.remove("drop");
+
+  if(d.mode==="scroll"){
+    glide(d.sx, d.sy, d.vx, d.vy);
+    drag = null; return;
+  }
+
+  if(d.mode==="drag"){
+    d.ghost && d.ghost.remove();
+    d.el.classList.remove("ghosted");
+    if(d.over) d.over.classList.remove("drop");
+    const moved = Math.hypot(e.clientX-d.x0, e.clientY-d.y0) > 6;
+    if(!moved){ drag=null; tap(d.gid, d.from); return; }
+
+    const under = document.elementFromPoint(e.clientX, e.clientY);
+    const seat = under && under.closest ? under.closest("[data-seat]") : null;
+    const inTray = under && under.closest ? under.closest("#tray") : null;
+    if(seat) putIn(seat.dataset.seat, d.gid, d.from);
+    else if(inTray && d.from){ pushUndo(); delete V().assign[d.from]; ui.sel=null; touch(); renderAll(); }
+    drag = null; return;
+  }
+
+  drag = null;
+  tap(d.gid, d.from);
+}
+
+function glide(sx, sy, vx, vy){
+  if((!sx && !sy) || (Math.abs(vx)<1 && Math.abs(vy)<1)) return;
+  const step = ()=>{
+    vx*=0.93; vy*=0.93;
+    if(sx) sx.scrollLeft -= vx;
+    if(sy) sy.scrollTop  -= vy;
+    if(Math.abs(vx)>0.4 || Math.abs(vy)>0.4) momentum = requestAnimationFrame(step);
+    else momentum = null;
+  };
+  momentum = requestAnimationFrame(step);
+}
+
+function tap(gid, fromSeat){
+  if(ui.sel && ui.sel.gid===gid){ ui.sel=null; renderAll(); return; }
+  if(ui.sel){
+    // druhý ťuk na inú menovku = výmena
+    const a = ui.sel, b = {gid, seat:fromSeat};
+    swapOrMove(a, b);
+    return;
+  }
+  ui.sel = {gid, seat:fromSeat};
+  renderAll();
+}
+
+function swapOrMove(a, b){
+  const v = V();
+  if(!a.seat && !b.seat){ ui.sel={gid:b.gid, seat:null}; renderAll(); return; }
+  pushUndo();
+  if(a.seat && b.seat){ v.assign[a.seat]=b.gid; v.assign[b.seat]=a.gid; }
+  else if(a.seat && !b.seat){ v.assign[a.seat]=b.gid; }
+  else if(!a.seat && b.seat){ v.assign[b.seat]=a.gid; }
+  ui.sel = null; touch(); renderAll();
+}
+
+function putIn(seatKey, gid, fromSeat){
+  const v = V(); const cur = v.assign[seatKey];
+  if(cur===gid){ ui.sel=null; renderAll(); return; }
+  pushUndo();
+  if(fromSeat) delete v.assign[fromSeat];
+  if(cur && fromSeat) v.assign[fromSeat] = cur;
+  else if(cur) delete v.assign[seatKey];
+  v.assign[seatKey] = gid;
+  ui.sel = null; touch(); renderAll();
+}
+
+// ťuk na prázdnu stoličku
+grid.addEventListener("click", e=>{
+  const seat = e.target.closest ? e.target.closest("[data-seat]") : null;
+  if(!seat) return;
+  if(!ui.sel) return;
+  putIn(seat.dataset.seat, ui.sel.gid, ui.sel.seat);
+});
+stage.addEventListener("pointerdown", e=>{
+  if(e.target===stage || e.target.classList.contains("stage-inner")){ if(ui.sel){ui.sel=null;renderAll();} }
+});
+
+/* ============================================================
+   Akcie so stolom
+   ============================================================ */
+function setPairs(n){
+  const v = V();
+  n = Math.max(MIN_PAIRS, Math.min(MAX_PAIRS, n));
+  if(n===v.pairs) return;
+  pushUndo();
+  if(n < v.pairs){
+    let dropped = 0;
+    for(let i=n;i<v.pairs;i++){
+      if(v.assign["A"+i]){ delete v.assign["A"+i]; dropped++; }
+      if(v.assign["B"+i]){ delete v.assign["B"+i]; dropped++; }
+    }
+    if(dropped) toast(dropped+" "+(dropped===1?"menovka sa vrátila":"menoviek sa vrátilo")+" do zoznamu");
+  }
+  v.pairs = n; ui.sel=null; touch(); renderAll();
+}
+function toggleHeads(){
+  const v = V(); pushUndo();
+  if(v.heads){ delete v.assign.H0; delete v.assign.H1; }
+  v.heads = !v.heads; touch(); renderAll();
+}
+function flipSides(){
+  const v = V(); pushUndo();
+  const a = {};
+  for(const k in v.assign){
+    if(k[0]==="A") a["B"+k.slice(1)] = v.assign[k];
+    else if(k[0]==="B") a["A"+k.slice(1)] = v.assign[k];
+    else a[k] = v.assign[k];
+  }
+  v.assign = a; touch(); renderAll();
+}
+function mirror(){
+  const v = V(); pushUndo();
+  const a = {}, n=v.pairs;
+  for(const k in v.assign){
+    if(k[0]==="A"||k[0]==="B") a[k[0]+(n-1-parseInt(k.slice(1),10))] = v.assign[k];
+    else a[k==="H0"?"H1":"H0"] = v.assign[k];
+  }
+  v.assign = a; touch(); renderAll();
+}
+function clearTable(){
+  const v = V(); if(!Object.keys(v.assign).length) return;
+  pushUndo(); v.assign = {}; ui.sel=null; touch(); renderAll();
+  toast("Stôl je prázdny");
+}
+
+/* ---- automatické rozsadenie ---- */
+function sortFamily(arr){
+  return arr.slice().sort((a,b)=> (RANK[a.cat]-RANK[b.cat]) || a.name.localeCompare(b.name,"sk"));
+}
+function autoArrange(mode, silent){
+  const v = V(); if(!silent) pushUndo();
+  const n = v.pairs, assign = {};
+  const bride = CORE.find(g=>g.cat==="nevesta"), groom = CORE.find(g=>g.cat==="ženích");
+  const zs = sortFamily(CORE.filter(g=>g.side==="Zuzik" && g!==bride));
+  const ps = sortFamily(CORE.filter(g=>g.side==="Petik" && g!==groom));
+  const c = Math.floor((n-1)/2);
+
+  if(mode==="centre"){
+    // novomanželia v strede hornej strany, rodiny sa rozbiehajú do strán
+    assign["A"+c] = bride.id;
+    if(c+1 < n) assign["A"+(c+1)] = groom.id;
+    const left = ["B"+c];
+    for(let i=c-1;i>=0;i--){ left.push("A"+i, "B"+i); }
+    const right = [];
+    if(c+1 < n) right.push("B"+(c+1));
+    for(let i=c+2;i<n;i++){ right.push("A"+i, "B"+i); }
+    if(v.heads){ left.push("H0"); right.push("H1"); }
+    fill(assign, left, zs, right);
+    fill(assign, right, ps, left);
+  }else{
+    // každá rodina na svojej strane stola, novomanželia oproti sebe
+    assign["A"+c] = bride.id;
+    assign["B"+c] = groom.id;
+    const za = centerOut(n,c).filter(i=>i!==c).map(i=>"A"+i);
+    const pb = centerOut(n,c).filter(i=>i!==c).map(i=>"B"+i);
+    if(v.heads){ za.push("H0"); pb.push("H1"); }
+    fill(assign, za, zs, pb);
+    fill(assign, pb, ps, za);
+  }
+  v.assign = assign; ui.sel=null;
+  if(silent) return;
+  touch(); renderAll();
+  const left = CORE.length - Object.keys(assign).length;
+  toast(left>0 ? "Rozsadené — "+left+" ešte nemá miesto, predĺž stôl" : "Rozsadené");
+}
+function centerOut(n, c){
+  const out=[]; for(let d=0; d<n; d++){
+    if(c-d>=0) out.push(c-d);
+    if(d>0 && c+d<n) out.push(c+d);
+  }
+  return out.filter((x,i,a)=>a.indexOf(x)===i);
+}
+function fill(assign, seats, people, overflowSeats){
+  let qi = 0;
+  for(const s of seats){ if(qi>=people.length) break; if(assign[s]) continue; assign[s]=people[qi++].id; }
+  if(qi<people.length && overflowSeats){
+    for(let i=overflowSeats.length-1;i>=0 && qi<people.length;i--){
+      const s = overflowSeats[i]; if(assign[s]) continue; assign[s]=people[qi++].id;
+    }
+  }
+}
+
+/* ============================================================
+   Verzie
+   ============================================================ */
+function versionSheet(){
+  const body = document.createElement("div"); body.className="vlist";
+  store.versions.forEach(v=>{
+    const seats = v.pairs*2+(v.heads?2:0), used = Object.keys(v.assign).length;
+    const mini = document.createElement("div"); mini.className="mini";
+    seatKeys(v).filter(k=>k[0]!=="B").slice(0,16).forEach(k=>{
+      const i = document.createElement("i");
+      const g = BY_ID[v.assign[k]];
+      if(g) i.className = g.side==="Zuzik"?"z":"p";
+      mini.append(i);
+    });
+    const meta = document.createElement("div"); meta.className="vmeta";
+    const t = document.createElement("div"); t.className="vt"; t.textContent = v.name;
+    const s = document.createElement("div"); s.className="vs";
+    s.textContent = used+"/"+seats+" miest · "+fmtDate(v.updated);
+    meta.append(t,s);
+
+    const pick = document.createElement("button");
+    pick.className="vrow"; pick.type="button";
+    pick.style.cssText="flex:1 1 auto;min-width:0";
+    pick.setAttribute("aria-current", v.id===store.activeId ? "true":"false");
+    pick.append(mini, meta);
+    pick.addEventListener("click", ()=>{ store.activeId=v.id; ui.sel=null; undoStack=[]; touch(); renderAll(); closeOverlay(); });
+
+    const wrap = document.createElement("div");
+    wrap.style.cssText="display:flex;align-items:center;gap:4px;width:100%";
+    wrap.append(pick);
+
+    const dup = document.createElement("button"); dup.className="iconbtn"; dup.type="button"; dup.title="Duplikovať";
+    dup.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+    dup.addEventListener("click", ()=>{
+      const nv = newVersion(v.name+" (kópia)", v.pairs);
+      nv.heads=v.heads; nv.assign=Object.assign({},v.assign);
+      store.versions.push(nv); store.activeId=nv.id; undoStack=[]; touch(); renderAll(); closeOverlay(); openVersions();
+    });
+
+    const ren = document.createElement("button"); ren.className="iconbtn"; ren.type="button"; ren.title="Premenovať";
+    ren.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>';
+    ren.addEventListener("click", ()=>{ closeOverlay(); renameSheet(v); });
+
+    const del = document.createElement("button"); del.className="iconbtn"; del.type="button"; del.title="Zmazať";
+    del.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/></svg>';
+    del.disabled = store.versions.length<=1;
+    if(del.disabled) del.style.opacity=".3";
+    del.addEventListener("click", ()=>{
+      if(store.versions.length<=1) return;
+      if(!confirm("Zmazať verziu „"+v.name+"“?")) return;
+      store.versions = store.versions.filter(x=>x.id!==v.id);
+      if(store.activeId===v.id) store.activeId = store.versions[0].id;
+      undoStack=[]; touch(); renderAll(); closeOverlay(); openVersions();
+    });
+
+    wrap.append(dup, ren, del);
+    body.append(wrap);
+  });
+  return body;
+}
+
+function openVersions(){
+  const body = versionSheet();
+  const bNew = mkBtn("Nová prázdna verzia","btn");
+  bNew.addEventListener("click", ()=>{
+    const v = V();
+    const nv = newVersion("Verzia "+(store.versions.length+1), v.pairs);
+    nv.heads = v.heads;
+    store.versions.push(nv); store.activeId=nv.id; undoStack=[]; touch(); renderAll(); closeOverlay();
+  });
+  const bDup = mkBtn("Duplikovať aktuálnu","btn primary");
+  bDup.addEventListener("click", ()=>{
+    const v = V();
+    const nv = newVersion(v.name+" (kópia)", v.pairs);
+    nv.heads=v.heads; nv.assign=Object.assign({},v.assign);
+    store.versions.push(nv); store.activeId=nv.id; undoStack=[]; touch(); renderAll(); closeOverlay();
+  });
+  overlay("Verzie", body, [bNew,bDup]);
+}
+
+function renameSheet(v){
+  const body = document.createElement("div");
+  body.innerHTML = '<div class="field"><label for="vnm">Názov verzie</label><input id="vnm" type="text" maxlength="40"></div>';
+  const save = mkBtn("Uložiť","btn primary");
+  const cancel = mkBtn("Zrušiť","btn");
+  cancel.addEventListener("click", ()=>{ closeOverlay(); openVersions(); });
+  save.addEventListener("click", ()=>{
+    const val = body.querySelector("#vnm").value.trim();
+    if(val) v.name = val;
+    touch(); renderAll(); closeOverlay(); openVersions();
+  });
+  overlay("Premenovať", body, [cancel,save]);
+  const inp = body.querySelector("#vnm"); inp.value = v.name; inp.focus(); inp.select();
+}
+
+function openAuto(){
+  const body = document.createElement("div"); body.className="opts";
+  const mk = (title, desc, gfx, mode)=>{
+    const b = document.createElement("button"); b.className="opt"; b.type="button";
+    b.innerHTML = '<span class="og">'+gfx+'</span><span><strong>'+title+'</strong><span>'+desc+'</span></span>';
+    b.addEventListener("click", ()=>{ closeOverlay(); autoArrange(mode); });
+    return b;
+  };
+  const g1 = '<i style="left:2px;top:4px;width:15px;background:var(--zuzik)"></i>'+
+             '<i style="right:2px;top:4px;width:15px;background:var(--petik)"></i>'+
+             '<i style="left:2px;bottom:4px;width:15px;background:var(--zuzik)"></i>'+
+             '<i style="right:2px;bottom:4px;width:15px;background:var(--petik)"></i>';
+  const g2 = '<i style="left:2px;top:4px;right:2px;background:var(--zuzik)"></i>'+
+             '<i style="left:2px;bottom:4px;right:2px;background:var(--petik)"></i>';
+  body.append(
+    mk("Novomanželia v strede","Zuzik a Petik vedľa seba v strede, rodiny sa rozbiehajú do strán — najbližší príbuzní najbližšie.", g1, "centre"),
+    mk("Každá rodina na svojej strane","Zuzik a Petik oproti sebe. Celá horná strana patrí Zuzikovej rodine, dolná Petikovej.", g2, "sides")
+  );
+  const note = document.createElement("p");
+  note.style.cssText="margin:14px 0 0;font-size:12px;color:var(--ink-3);line-height:1.45";
+  note.textContent = "Rozsadenie pracuje len s pozvanými — voliteľných („nie“) necháva v zozname. Pôvodné rozloženie vieš vrátiť tlačidlom Späť.";
+  body.append(note);
+  const cancel = mkBtn("Zrušiť","btn"); cancel.addEventListener("click", closeOverlay);
+  overlay("Rozsadiť automaticky", body, [cancel]);
+}
+
+/* ============================================================
+   Prenosný kód plánu — rozloženie sa nedrží v linku, tak cestuje takto
+   ============================================================ */
+function encodePlan(v){
+  const idx = {}; GUESTS.forEach((g,i)=>{ idx[g.id]=i; });
+  const body = seatKeys(v).map(k=>{
+    const gid = v.assign[k];
+    return (gid && idx[gid]!=null) ? idx[gid].toString(36).padStart(2,"0") : "--";
+  }).join("");
+  return "ZP1"+v.pairs.toString(36).padStart(2,"0")+(v.heads?"1":"0")+body+"~"+encodeURIComponent(v.name);
+}
+function decodePlan(code){
+  code = String(code||"").replace(/\s+/g,"");
+  const cut = code.indexOf("~");
+  const head = cut>=0 ? code.slice(0,cut) : code;
+  let name = "";
+  if(cut>=0){ try{ name = decodeURIComponent(code.slice(cut+1)); }catch(e){} }
+  if(!/^ZP1/i.test(head)) return null;
+  const pairs = parseInt(head.slice(3,5),36);
+  if(!(pairs>=MIN_PAIRS && pairs<=MAX_PAIRS)) return null;
+  const v = newVersion(name.slice(0,40) || "Prijatý plán", pairs);
+  v.heads = head.slice(5,6)==="1";
+  const keys = seatKeys(v), body = head.slice(6);
+  if(body.length !== keys.length*2) return null;
+  for(let i=0;i<keys.length;i++){
+    const t = body.slice(i*2,i*2+2);
+    if(t==="--") continue;
+    const g = GUESTS[parseInt(t,36)];
+    if(g) v.assign[keys[i]] = g.id;
+  }
+  return v;
+}
+function importPlan(code, quiet){
+  const v = decodePlan(code);
+  if(!v){ if(!quiet) toast("Kód sa nedá prečítať — skopíruj ho celý"); return false; }
+  store.versions.push(v); store.activeId = v.id; ui.sel=null; undoStack=[];
+  touch(); renderAll();
+  toast("Plán „"+v.name+"“ načítaný ako nová verzia");
+  return true;
+}
+
+function openShare(){
+  const v = V(), code = encodePlan(v);
+  const body = document.createElement("div");
+
+  const f1 = document.createElement("div"); f1.className="field";
+  const l1 = document.createElement("label"); l1.setAttribute("for","pcode");
+  l1.textContent = "Kód tejto verzie — " + v.name;
+  const ta = document.createElement("textarea"); ta.id="pcode"; ta.rows=4; ta.readOnly=true; ta.value=code;
+  ta.addEventListener("focus", ()=>ta.select());
+  f1.append(l1, ta);
+
+  const n1 = document.createElement("p"); n1.className="note";
+  n1.textContent = "Rozloženie stola sa v odkaze neprenáša — sedí v pamäti prehliadača. Pošli tento kód (chatom, mailom) a na druhom zariadení ho vlož nižšie; načíta sa presne toto rozsadenie ako nová verzia.";
+
+  const f2 = document.createElement("div"); f2.className="field";
+  const l2 = document.createElement("label"); l2.setAttribute("for","icode");
+  l2.textContent = "Načítať plán od niekoho iného";
+  const ti = document.createElement("textarea"); ti.id="icode"; ti.rows=3; ti.placeholder="Sem vlož prijatý kód…";
+  f2.append(l2, ti);
+
+  body.append(f1, n1, f2);
+
+  const bCopy = mkBtn("Skopírovať kód","btn");
+  bCopy.addEventListener("click", ()=>{
+    ta.select();
+    const done = ()=>toast("Kód je v schránke");
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(code).then(done, ()=>{ try{document.execCommand("copy"); done();}catch(e){ toast("Označ kód a skopíruj ručne"); } });
+    }else{ try{ document.execCommand("copy"); done(); }catch(e){ toast("Označ kód a skopíruj ručne"); } }
+  });
+  const bLoad = mkBtn("Načítať","btn primary");
+  bLoad.addEventListener("click", ()=>{ if(importPlan(ti.value)) closeOverlay(); });
+
+  overlay("Zdieľať plán", body, [bCopy, bLoad]);
+}
+
+/* ============================================================
+   Overlay + toast
+   ============================================================ */
+let ovEl = null;
+function mkBtn(text, cls){ const b=document.createElement("button"); b.type="button"; b.className=cls; b.textContent=text; return b; }
+function overlay(title, bodyEl, buttons, wide){
+  closeOverlay();
+  const ov = document.createElement("div"); ov.className="ov";
+  const sh = document.createElement("div"); sh.className="sheet"+(wide?" wide":"");
+  const hd = document.createElement("div"); hd.className="sheet-head";
+  const h = document.createElement("h2"); h.textContent=title;
+  const sp = document.createElement("div"); sp.className="spacer";
+  const x = document.createElement("button"); x.className="iconbtn"; x.type="button"; x.setAttribute("aria-label","Zavrieť");
+  x.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+  x.addEventListener("click", closeOverlay);
+  hd.append(h,sp,x);
+  const bd = document.createElement("div"); bd.className="sheet-body"; bd.append(bodyEl);
+  sh.append(hd,bd);
+  if(buttons && buttons.length){
+    const ft = document.createElement("div"); ft.className="sheet-foot"; ft.append(...buttons); sh.append(ft);
+  }
+  ov.append(sh);
+  ov.addEventListener("pointerdown", e=>{ if(e.target===ov) closeOverlay(); });
+  document.body.append(ov); ovEl = ov;
+  return sh;
+}
+function closeOverlay(){ if(ovEl){ ovEl.remove(); ovEl=null; } }
+
+let toastTimer;
+function toast(msg){
+  const t = $("#toast"); t.textContent = msg; t.classList.add("on");
+  clearTimeout(toastTimer); toastTimer = setTimeout(()=>t.classList.remove("on"), 2600);
+}
+function fmtDate(ts){
+  if(!ts) return "—";
+  const d = new Date(ts);
+  return d.toLocaleDateString("sk-SK",{day:"numeric",month:"numeric"})+" "+
+         d.toLocaleTimeString("sk-SK",{hour:"2-digit",minute:"2-digit"});
+}
+
+/* ============================================================
+   Screenshot → schránka
+   ============================================================ */
+const PAL = {
+  paper:"#F5F3F9", ink:"#2B2536", ink2:"#6B6380", ink3:"#9B92AD",
+  line:"#CEC7DC", linen:"#ECE4D8", linenEdge:"#D4C7B2", linenInk:"#8A7A61",
+  z:"#DE6A94", zbg:"#FCEDF3", zline:"#F0BED2", zink:"#8D3155",
+  p:"#4F86D6", pbg:"#E9F0FC", pline:"#BFD5F3", pink:"#254E7E",
+  mbg:"#F1EFF4", mline:"#D6D1DE"
+};
+function rr(c,x,y,w,h,r){
+  if(c.roundRect){ c.beginPath(); c.roundRect(x,y,w,h,r); return; }
+  r = Math.min(r, w/2, h/2);
+  c.beginPath();
+  c.moveTo(x+r,y); c.arcTo(x+w,y,x+w,y+h,r); c.arcTo(x+w,y+h,x,y+h,r);
+  c.arcTo(x,y+h,x,y,r); c.arcTo(x,y,x+w,y,r); c.closePath();
+}
+function fitText(c, text, max){
+  if(c.measureText(text).width <= max) return text;
+  let t = text;
+  while(t.length>1 && c.measureText(t+"…").width > max) t = t.slice(0,-1);
+  return t+"…";
+}
+
+async function renderPng(){
+  try{ await document.fonts.ready; }catch(e){}
+  const v = V(), n = v.pairs, H = v.heads;
+  const SW=152, SH=76, G=12, BAND=62, PAD=44;
+  const cols = n + (H?2:0);
+  const tableW = cols*SW + (cols-1)*G;
+  const headH = 112, footH = 66;
+  const W = tableW + PAD*2;
+  const bodyH = SH+G+BAND+G+SH;
+  const Hh = headH + bodyH + footH;
+  const scale = Math.max(1, Math.min(2, 3400/W));
+
+  const cv = document.createElement("canvas");
+  cv.width = Math.round(W*scale); cv.height = Math.round(Hh*scale);
+  const c = cv.getContext("2d");
+  c.scale(scale,scale);
+  c.textBaseline = "alphabetic";
+
+  c.fillStyle = PAL.paper; c.fillRect(0,0,W,Hh);
+
+  const seats = v.pairs*2+(H?2:0), used = Object.keys(v.assign).length;
+  const sid = seatedIds(v);
+  const zc = GUESTS.filter(g=>g.side==="Zuzik" && sid.has(g.id)).length;
+  const pc = GUESTS.filter(g=>g.side==="Petik" && sid.has(g.id)).length;
+
+  // hlavička
+  c.fillStyle = PAL.ink;
+  c.font = '600 34px Fraunces, Georgia, serif';
+  c.fillText("Zasadací poriadok", PAD, 52);
+  c.fillStyle = PAL.ink2;
+  c.font = '400 15px "DM Mono", ui-monospace, monospace';
+  c.fillText(v.name + "  ·  " + used + "/" + seats + " miest  ·  " + n + " párov" + (H?" + 2 čelá":""), PAD, 76);
+
+  // legenda vpravo
+  let lx = W - PAD;
+  c.font = '500 14px "DM Sans", sans-serif';
+  const leg = [[PAL.p,"Petik "+pc],[PAL.z,"Zuzik "+zc]];
+  leg.forEach(([col,txt])=>{
+    const tw = c.measureText(txt).width;
+    c.fillStyle = PAL.ink2; c.textAlign="right"; c.fillText(txt, lx, 52);
+    c.fillStyle = col; c.beginPath(); c.arc(lx-tw-12, 47, 6, 0, Math.PI*2); c.fill();
+    lx -= tw + 34;
+  });
+  c.textAlign="left";
+
+  const y0 = headH;
+  const colX = i => PAD + i*(SW+G);
+  const off = H?1:0;
+
+  // doska
+  const bx = colX(off), bw = n*SW + (n-1)*G, by = y0+SH+G;
+  c.fillStyle = PAL.linen; rr(c,bx,by,bw,BAND,8); c.fill();
+  c.strokeStyle = PAL.linenEdge; c.lineWidth=1.5; rr(c,bx,by,bw,BAND,8); c.stroke();
+  c.fillStyle = PAL.linenInk;
+  c.font = '500 13px Fraunces, Georgia, serif';
+  c.textAlign="center";
+  const label = "H L A V N Ý   S T Ô L";
+  c.fillText(label, bx+bw/2, by+BAND/2+5);
+  c.textAlign="left";
+
+  const drawCard = (key, x, y)=>{
+    const gid = v.assign[key], g = BY_ID[gid];
+    if(!g){
+      c.setLineDash([5,5]); c.strokeStyle = PAL.line; c.lineWidth=1.5;
+      rr(c,x+.75,y+.75,SW-1.5,SH-1.5,11); c.stroke(); c.setLineDash([]);
+      c.fillStyle = PAL.ink3; c.font='400 12px "DM Mono", ui-monospace, monospace';
+      c.textAlign="center"; c.fillText(seatCode(key), x+SW/2, y+SH/2+4); c.textAlign="left";
+      return;
+    }
+    const isZ = g.side==="Zuzik";
+    const bg = g.maybe?PAL.mbg:(isZ?PAL.zbg:PAL.pbg);
+    const ln = g.maybe?PAL.mline:(isZ?PAL.zline:PAL.pline);
+    const ac = g.maybe?PAL.line:(isZ?PAL.z:PAL.p);
+    c.fillStyle = bg; rr(c,x,y,SW,SH,11); c.fill();
+    if(g.maybe){ c.setLineDash([5,4]); }
+    c.strokeStyle = ln; c.lineWidth=1.5; rr(c,x+.75,y+.75,SW-1.5,SH-1.5,11); c.stroke(); c.setLineDash([]);
+    c.save(); rr(c,x,y,SW,SH,11); c.clip();
+    c.fillStyle = ac; c.fillRect(x,y,4,SH); c.restore();
+
+    c.fillStyle = g.maybe?PAL.ink2:PAL.ink;
+    c.font = (g.maybe?'500 ':'700 ')+'17px "DM Sans", sans-serif';
+    c.fillText(fitText(c, g.name + (g.maybe?" ?":""), SW-26), x+14, y+SH/2+1);
+    c.fillStyle = g.maybe?PAL.ink3:(isZ?PAL.zink:PAL.pink);
+    c.font = '500 11.5px "DM Sans", sans-serif';
+    c.fillText(fitText(c, g.cat, SW-26), x+14, y+SH/2+18);
+    c.fillStyle = PAL.ink3; c.font='400 10px "DM Mono", ui-monospace, monospace';
+    c.textAlign="right"; c.fillText(seatCode(key), x+SW-8, y+15); c.textAlign="left";
+  };
+
+  for(let i=0;i<n;i++){
+    drawCard("A"+i, colX(i+off), y0);
+    drawCard("B"+i, colX(i+off), y0+SH+G+BAND+G);
+  }
+  if(H){
+    drawCard("H0", colX(0), by+BAND/2-SH/2);
+    drawCard("H1", colX(cols-1), by+BAND/2-SH/2);
+  }
+
+  // päta
+  const fy = y0 + bodyH + 40;
+  c.fillStyle = PAL.ink3;
+  c.font = '400 12.5px "DM Mono", ui-monospace, monospace';
+  c.fillText("A1–A"+n+" horná strana  ·  B1–B"+n+" dolná strana"+(H?"  ·  Č1, Č2 čelá":""), PAD, fy);
+  c.textAlign="right";
+  c.fillText(new Date().toLocaleDateString("sk-SK",{day:"numeric",month:"long",year:"numeric"}), W-PAD, fy);
+  c.textAlign="left";
+
+  return new Promise(res=>cv.toBlob(b=>res(b), "image/png"));
+}
+
+function screenshot(){
+  const blobP = renderPng();
+  let copied = false;
+  if(navigator.clipboard && window.ClipboardItem){
+    try{
+      const item = new ClipboardItem({"image/png": blobP});
+      copied = true;
+      navigator.clipboard.write([item]).then(
+        ()=>toast("Obrázok je v schránke — vlož ho kamkoľvek"),
+        ()=>blobP.then(showShot)
+      );
+    }catch(e){ copied = false; }
+  }
+  if(!copied) blobP.then(showShot);
+}
+
+async function showShot(blob){
+  const url = URL.createObjectURL(blob);
+  const body = document.createElement("div");
+  const img = document.createElement("img"); img.className="shotimg"; img.src=url; img.alt="Náhľad zasadacieho poriadku";
+  const p = document.createElement("p");
+  p.style.cssText="margin:12px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.45";
+  p.textContent = "Schránku sa nepodarilo použiť priamo. Podrž prst na obrázku (alebo klikni pravým) a dáj Kopírovať — prípadne ho ulož ako súbor.";
+  body.append(img,p);
+
+  const retry = mkBtn("Skúsiť znova skopírovať","btn");
+  retry.addEventListener("click", async ()=>{
+    try{
+      await navigator.clipboard.write([new ClipboardItem({"image/png": blob})]);
+      toast("Obrázok je v schránke"); closeOverlay();
+    }catch(e){ toast("Schránka nie je dostupná — použi Uložiť PNG"); }
+  });
+  const fname = "zasadaci-poriadok-"+V().name.replace(/[^\p{L}\p{N}]+/gu,"-").toLowerCase()+".png";
+  const dl = mkBtn("Uložiť PNG","btn primary");
+  dl.addEventListener("click", async ()=>{
+    let d = null;
+    try{ d = window.claude && claude.use ? await claude.use("downloads") : null; }catch(e){ d = null; }
+    if(d){
+      try{ await d.save({filename:fname, data:blob}); closeOverlay(); }
+      catch(e){ if(e && e.code!=="declined") toast("Uloženie sa nepodarilo — skopíruj obrázok podržaním prsta"); }
+      return;
+    }
+    // samostatný súbor mimo Claude — priame stiahnutie
+    const a = document.createElement("a");
+    a.href = url; a.download = fname;
+    document.body.append(a); a.click(); a.remove();
+    closeOverlay();
+  });
+  overlay("Zasadací poriadok", body, [retry, dl], true);
+  setTimeout(()=>URL.revokeObjectURL(url), 300000);
+}
+
+/* ============================================================
+   Ovládanie
+   ============================================================ */
+$("#lenMinus").addEventListener("click", ()=>setPairs(V().pairs-1));
+$("#lenPlus").addEventListener("click", ()=>setPairs(V().pairs+1));
+$("#btnHeads").addEventListener("click", toggleHeads);
+$("#btnOrient").addEventListener("click", ()=>{
+  const cur = orientation();
+  ui.orient = cur==="h" ? "v" : "h";
+  renderAll();
+  toast(ui.orient==="v" ? "Stôl na výšku" : "Stôl na šírku");
+});
+$("#btnAuto").addEventListener("click", openAuto);
+$("#btnFlip").addEventListener("click", flipSides);
+$("#btnMirror").addEventListener("click", mirror);
+$("#btnClear").addEventListener("click", clearTable);
+$("#btnUndo").addEventListener("click", undo);
+$("#btnVersions").addEventListener("click", openVersions);
+$("#btnShare").addEventListener("click", openShare);
+$("#btnShot").addEventListener("click", screenshot);
+
+$("#segSide").addEventListener("click", e=>{
+  const b = e.target.closest("button"); if(!b) return;
+  ui.side = b.dataset.side;
+  [...e.currentTarget.children].forEach(x=>x.setAttribute("aria-pressed", String(x===b)));
+  renderPool();
+});
+$("#btnExpand").addEventListener("click", ()=>{
+  ui.expanded = !ui.expanded;
+  applyTrayState();
+});
+function applyTrayState(){
+  const narrow = window.innerWidth < 920;
+  const collapsed = narrow && !ui.expanded;
+  tray.classList.toggle("collapsed", collapsed);
+  $("#btnExpand").hidden = !narrow;
+  $("#btnExpand").style.transform = collapsed ? "" : "rotate(180deg)";
+  $("#btnExpand").title = collapsed ? "Rozbaliť zoznam" : "Zbaliť zoznam";
+}
+
+document.addEventListener("keydown", e=>{
+  if(e.key==="Escape"){ if(ovEl) closeOverlay(); else if(ui.sel){ ui.sel=null; renderAll(); } }
+  if((e.metaKey||e.ctrlKey) && e.key.toLowerCase()==="z"){ e.preventDefault(); undo(); }
+});
+
+let ro;
+function watchSize(){
+  let last = orientation();
+  ro = new ResizeObserver(()=>{
+    applyTrayState();
+    if(ui.orient!=="auto") return;
+    const o = orientation();
+    if(o!==last){ last=o; renderAll(); }
+  });
+  ro.observe(stage);
+}
+
+/* ============================================================
+   Štart
+   ============================================================ */
+function boot(){
+  const local = loadLocal();
+  if(local){ store = local; if(!V()) store.activeId = store.versions[0].id; }
+  else{
+    const v = newVersion("Verzia 1", 16);
+    store = {versions:[v], activeId:v.id, updated:Date.now(), client:CLIENT};
+    // otvor v zmysluplnom stave, nie ako prázdna škrupina
+    autoArrange("centre", true);
+    saveLocal();
+  }
+  renderHint(); applyTrayState(); renderAll(); watchSize();
+
+  // samostatný súbor otvorený s kódom v adrese: .../plan.html#ZP1...
+  try{
+    const h = decodeURIComponent((location.hash||"").slice(1));
+    if(/^ZP1/i.test(h)){
+      importPlan(h, true);
+      history.replaceState(null,"",location.pathname+location.search);
+    }
+  }catch(e){}
+}
+boot();
+</script>
+</body>
+</html>
